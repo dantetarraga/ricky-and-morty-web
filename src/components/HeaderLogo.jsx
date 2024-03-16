@@ -5,7 +5,7 @@ const HeaderLogo = ({ image }) => {
         <img
           src={image}
           alt="Logo Ricky & Morty"
-          className="hidden w-[120px] md:block"
+          className="hidden w-[120px] md:block aspect-square"
         />
         <h1 className="font-bold text-2xl md:text-4xl">
           Rick & Morty{" "}

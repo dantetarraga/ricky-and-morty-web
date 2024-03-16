@@ -4,7 +4,7 @@ const NAV_LINKS = [
   { label: "Characters", to: "/characters" },
   // { label: "Episode", to: "/episode" },
   // { label: "Location", to: "/location" },
-  { label: "About", to: "/" },
+  // { label: "About", to: "/" },
 ];
 
 const Navbar = () => {

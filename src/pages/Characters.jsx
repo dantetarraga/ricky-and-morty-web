@@ -8,16 +8,13 @@ const Characters = () => {
   const { characters } = useLoaderData();
   return (
     <div>
-      <div className="h-[70svh] overflow-auto">
+      <div className="h-[70vh] overflow-auto">
         <Suspense fallback={<Skeleton />}>
           <Await resolve={characters}>
             {(characters) => <ListCharacters data={characters} />}
           </Await>
         </Suspense>
       </div>
-      {/* <div>
-        <Pagination totalPages={13} />
-      </div> */}
     </div>
   );
 };

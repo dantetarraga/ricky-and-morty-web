@@ -4,7 +4,6 @@ import Layout from "../components/Layout";
 import { charactersLoader } from "../pages/Characters";
 
 const Characters = lazy(() => import("../pages/Characters"));
-const About = lazy(() => import("../pages/About"));
 
 const router = createBrowserRouter([
   {
@@ -17,11 +16,6 @@ const router = createBrowserRouter([
         element: <Characters />,
         loader: charactersLoader,
         errorElement: <div className="text-white text-3xl">error</div>,
-      },
-      {
-        index: true,
-        // path: "about",
-        element: <About />,
       },
     ],
   },
