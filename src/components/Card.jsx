@@ -1,13 +1,31 @@
+import { useCallback, useEffect, useState } from "react";
 import "../index.css";
+import CharacterModal from "./CharacterModal";
 import StatusCharacter from "./StatusCharacter";
 
 const Card = ({ data }) => {
-  const { name, image, status, id } = data;
+  const { name, image, status } = data;
+  const [showModal, setShowModal] = useState(false);
+
+  const handleCloseModal = useCallback(() => setShowModal(false), []);
+
+  const handleEscape = useCallback(
+    (event) => {
+      if (event.keyCode === 27) handleCloseModal();
+    },
+    [showModal]
+  );
+
+  useEffect(() => {
+    if (showModal) document.addEventListener("keydown", handleEscape, false);
+    return () => document.removeEventListener("keydown", handleEscape, false);
+  }, [handleEscape, showModal]);
+
   return (
-    <div className="card-animation">
+    <div>
       <div
-        className="relative overflow-hidden border-2 border-black cursor-pointer"
-        onClick={() => console.log(id)}
+        className="relative overflow-hidden border-2 border-black cursor-pointer card-animation"
+        onClick={() => setShowModal(true)}
       >
         <img
           className="object-cover w-full hover:scale-110 transition-transform duration-500 ease-in-out rounded"
@@ -19,6 +37,14 @@ const Card = ({ data }) => {
           {name}
         </p>
       </div>
+
+      {showModal && (
+        <CharacterModal
+          character={data}
+          onClose={handleCloseModal}
+          show={showModal}
+        />
+      )}
     </div>
   );
 };
