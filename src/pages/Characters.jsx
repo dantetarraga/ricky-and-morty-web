@@ -6,6 +6,7 @@ import { getCharacterForPage } from "../services/characters";
 
 const Characters = () => {
   const { characters } = useLoaderData();
+
   return (
     <div>
       <div className="h-[70vh] overflow-auto">
@@ -26,11 +27,7 @@ export const charactersLoader = async ({ request }) => {
   const { info, results: characters } = await getCharacterForPage(page);
 
   return defer({
-    characters: new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(characters);
-      }, 2000);
-    }),
+    characters,
     info,
   });
 };
