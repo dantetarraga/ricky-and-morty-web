@@ -27,10 +27,11 @@ export const getCharacterByUrl = async (url) => {
   return await ajax(config);
 };
 
-export const getCharactersFromEpisode = async (urls) => {
-  const characteres = await Promise.all(
-    urls.map(async (url) => await getCharacterByUrl(url))
-  );
+export const getFilterCharacterByName = async (name) => {
+  const config = {
+    method: "GET",
+    url: `${import.meta.env.VITE_BASE_URL}/character/?name=${name}`,
+  };
 
-  return characteres;
+  return await ajax(config);
 };
