@@ -4,7 +4,7 @@ import Search from "./Search";
 
 const Header = () => {
   return (
-    <header className="flex justify-between item-center w-full">
+    <header className="flex flex-col md:flex-row justify-between item-center w-full relative">
       <HeaderLogo image={logo} />
       {/* <Navbar /> */}
       <Search />

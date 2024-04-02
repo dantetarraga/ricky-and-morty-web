@@ -19,5 +19,6 @@ module.exports = {
     "react/prop-types": "off",
     "react-refresh/only-export-components": "off",
     "react-hooks/exhaustive-deps": "off",
+    "react/display-name": "off",
   },
 };

@@ -8,14 +8,14 @@ const CharacterModal = ({ character, onClose, show }) => {
     >
       <div
         onClick={(event) => event.stopPropagation()}
-        className="bg-white rounded-lg w-[420px]"
+        className="bg-white rounded-lg md:w-[420px] w-[300px] "
       >
         <img
           className="rounded-lg mb-2 w-full"
           src={image}
           alt={`${name} character image`}
         />
-        <div className="p-6 text-2xl font-mono flex flex-col gap-y-3">
+        <div className="p-6 text-sm md:text-2xl font-mono flex flex-col gap-y-3">
           <p>Name: {name}</p>
           <p>Status: {status}</p>
           <p>Gender: {gender}</p>
