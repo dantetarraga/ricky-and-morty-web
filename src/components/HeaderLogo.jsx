@@ -1,6 +1,6 @@
 const HeaderLogo = ({ image }) => {
   return (
-    <nav className="flex text-white my-10 gap-10">
+    <nav className="flex justify-center md:justify-start text-white my-10 gap-10">
       <div className="flex items-center gap-2">
         <img
           src={image}

@@ -7,7 +7,7 @@ import Skeleton from "./Skeleton";
 const Layout = () => {
   return (
     <BackgroundSpace>
-      <div className="w-3/4 m-auto">
+      <div className="w-3/4 m-auto relative">
         <Header />
         <main>
           <Suspense fallback={<Skeleton />}>
