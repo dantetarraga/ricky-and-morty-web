@@ -1,0 +1,21 @@
+{
+	"name": "my-workflow",
+	"version": "1.0.0",
+	"description": "A workflow that does something.",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"build": "vite build",
+		"dev": "vite build -w"
+	},
+	"keywords": [],
+	"author": "dantetarraga",
+	"license": "ISC",
+	"dependencies": {
+		"@relagit/vite": "^1.0.2",
+		"@types/primer__octicons": "^19.6.3",
+		"relagit": "0.14.7-1",
+		"typescript": "^5.4.5",
+		"vite": "^5.2.11"
+	}
+}
