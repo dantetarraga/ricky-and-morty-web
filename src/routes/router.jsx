@@ -8,7 +8,7 @@ const Characters = lazy(() => import("../pages/Characters"));
 
 const router = createBrowserRouter([
   {
-    path: "/ricky-and-morty-web",
+    path: "/",
     element: <Layout />,
     children: [
       {
